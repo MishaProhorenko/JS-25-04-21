@@ -61,20 +61,46 @@
 // console.log(rojer);
 
 
-const Developer = function (name, skills) {
-    this.name = name;
-    this.skills = skills;
-    this.experience = getRandomId();
-    this.showSkills = function () {
-        return `I know ${this.skills}`;
-    }
+// const Developer = function (name, skills) {
+//     this.name = name;
+//     this.skills = skills;
+//     this.experience = getRandomId();
+//     this.showSkills = function () {
+//         return `I know ${this.skills}`;
+//     }
 
-    function getRandomId() {
-        return Math.floor(Math.random() * 100) - 1;
-    };
-}
+//     function getRandomId() {
+//         return Math.floor(Math.random() * 100) - 1;
+//     };
+// }
 
-const dev = new Developer('John', ['HTML', 'CSS']);
+// const dev = new Developer('John', ['HTML', 'CSS']);
 
-console.log(dev);
-console.log(dev.showSkills());
+// console.log(dev);
+// console.log(dev.showSkills());
+
+const obj3 = {
+    name: 'Rita',
+    age: 19,
+    isAlive: true,    
+};
+
+
+const obj2 = {
+    name: 'John',
+    // age: 22,
+    isAlive: true,
+    __proto__:obj3,
+};
+
+const obj1 = {
+    name: 'Rick',
+    age: 33,
+    isAlive: true,
+    __proto__:obj2,
+};
+
+
+console.log(obj1);
+console.log(obj2);
+console.log(obj3);
